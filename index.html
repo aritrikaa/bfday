@@ -4,9 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    try { if (sessionStorage.getItem("loggedIn") !== "yes") { window.location.replace("login/index.html"); } } catch (e) {}
-  </script>
   <title>For You ♡</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Pinyon+Script&family=Caveat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=4">
@@ -14,7 +11,41 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="particles" id="particles" aria-hidden="true"></div>
+ <div class="login-view" id="loginView">
+    <div class="login-inner">
+      <header class="banner">
+        <span class="deco" aria-hidden="true">✿ ♡ ✿</span>
+        <!-- ✦ EDIT THIS: LOGIN PAGE TITLE ✦ -->
+        <h2 class="login-title">National Boyfriend's Day</h2>
+        <!-- ✦ EDIT THIS: LOGIN SUBTITLE ✦ -->
+        <p class="subtitle">a little secret is waiting for you</p>
+        <span class="star" aria-hidden="true">✦</span>
+      </header>
 
+      <section class="login-card" id="loginCard" aria-labelledby="loginHeading">
+        <span class="corner tl" aria-hidden="true">❦</span><span class="corner br" aria-hidden="true">❦</span>
+        <div class="lseal" id="lseal" aria-hidden="true">♡</div>
+       
+        <h3 id="loginHeading">Who goes there?</h3>
+        <form id="loginForm" novalidate>
+  
+          <label for="user">Username</label>
+          <input id="user" name="user" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+        
+          <label for="pass">Password</label>
+          <input id="pass" name="pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+          <p class="login-error" id="loginError" role="alert"></p>
+        
+          <button class="go" type="submit">open the garden ♡</button>
+        </form>
+       
+        <p class="login-hint">
+          Username: Your name in capitals,<br>
+          Password: Your name in small letters
+        </p>
+      </section>
+    </div>
+  </div>
   <main class="scene">
 
     <header class="banner">
