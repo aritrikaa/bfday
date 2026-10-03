@@ -1,4 +1,16 @@
+<!--
+========================================================
+PERSONALIZATION GUIDE
 
+Most of the website's written content can be edited
+directly in this HTML file.
+
+Search for "EDIT THIS" to find every customizable section.
+
+You do NOT need to modify the JavaScript to change
+the letter itself.
+========================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,35 +24,70 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="particles" id="particles" aria-hidden="true"></div>
 
-  
- <div class="login-view" id="loginView">
+  <!-- =====================================================
+       LOGIN SCREEN (shown first; the bouquet is revealed after login)
+       The username and password are set at the top of script.js
+       (look for "EDIT THIS: LOGIN DETAILS").
+  ===================================================== -->
+  <div class="login-view" id="loginView">
+    <!-- tiny flower shapes used only by the login screen -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+      <symbol id="lg-daisy" viewBox="-50 -50 100 100"><g fill="#fffaf0" stroke="#e8d9c0"><ellipse rx="7" ry="22" cy="-22"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(45)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(90)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(135)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(180)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(225)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(270)"/><ellipse rx="7" ry="22" cy="-22" transform="rotate(315)"/></g><circle r="9" fill="#e8b84a"/></symbol>
+      <symbol id="lg-fmn" viewBox="-50 -50 100 100"><g fill="#9db8e0"><circle cy="-24" r="17"/><circle cy="-24" r="17" transform="rotate(72)"/><circle cy="-24" r="17" transform="rotate(144)"/><circle cy="-24" r="17" transform="rotate(216)"/><circle cy="-24" r="17" transform="rotate(288)"/></g><circle r="8" fill="#f6e3a1"/></symbol>
+      <symbol id="lg-rose" viewBox="-50 -50 100 100"><circle r="40" fill="#d99aa5"/><circle r="31" fill="#e5b0b8"/><path d="M-22 -4a22 22 0 0 1 40 -10a16 16 0 0 1 -6 26a12 12 0 0 1 -22 -8a8 8 0 0 1 14 -6" fill="none" stroke="#b9707f" stroke-width="3" stroke-linecap="round"/></symbol>
+      <symbol id="lg-lav" viewBox="0 0 30 160"><path d="M15 160V30" stroke="#7d9470" stroke-width="2.5"/><g fill="#a99bd0"><ellipse cx="15" cy="14" rx="5" ry="8"/><ellipse cx="9" cy="30" rx="5" ry="8"/><ellipse cx="21" cy="30" rx="5" ry="8"/><ellipse cx="9" cy="48" rx="5" ry="8"/><ellipse cx="21" cy="48" rx="5" ry="8"/><ellipse cx="10" cy="66" rx="5" ry="8"/><ellipse cx="20" cy="66" rx="5" ry="8"/></g></symbol>
+    </defs></svg>
+
     <div class="login-inner">
       <header class="banner">
         <span class="deco" aria-hidden="true">✿ ♡ ✿</span>
- 
+        <!-- ✦ EDIT THIS: LOGIN PAGE TITLE ✦ -->
         <h2 class="login-title">National Boyfriend's Day</h2>
-       
-        <p class="subtitle">🫶🏼 a letter and bouquet, handmade, for my cutu sa bhondu bachha 🫶🏼</p>
+        <!-- ✦ EDIT THIS: LOGIN SUBTITLE ✦ -->
+        <p class="subtitle">a little secret is waiting for you</p>
         <span class="star" aria-hidden="true">✦</span>
       </header>
 
+      <!-- ✦ EDIT THIS: SMALL HANDWRITTEN NOTE ABOVE THE CARD ✦ -->
+      <p class="knock">knock, knock ♡</p>
+
       <section class="login-card" id="loginCard" aria-labelledby="loginHeading">
+        <!-- little flower sprigs that peek around the card and sway -->
+        <svg class="sprig sprig-l" viewBox="0 0 120 150" aria-hidden="true" focusable="false">
+          <path d="M60 150C58 110 40 80 22 50M60 150C64 100 80 70 98 40" stroke="#6f8a5f" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <use class="fl" href="#lg-lav" x="2" y="0" width="30" height="100" transform="rotate(-18 17 80)"/>
+          <use class="fl" href="#lg-daisy" x="64" y="6" width="52" height="52"/>
+          <use class="fl" href="#lg-fmn" x="30" y="58" width="30" height="30"/>
+          <use class="fl" href="#lg-rose" x="52" y="78" width="40" height="40"/>
+        </svg>
+        <svg class="sprig sprig-r" viewBox="0 0 120 150" aria-hidden="true" focusable="false">
+          <path d="M60 150C58 110 40 80 22 50M60 150C64 100 80 70 98 40" stroke="#6f8a5f" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <use class="fl" href="#lg-lav" x="2" y="0" width="30" height="100" transform="rotate(-18 17 80)"/>
+          <use class="fl" href="#lg-daisy" x="64" y="6" width="52" height="52"/>
+          <use class="fl" href="#lg-fmn" x="30" y="58" width="30" height="30"/>
+          <use class="fl" href="#lg-rose" x="52" y="78" width="40" height="40"/>
+        </svg>
+
         <span class="corner tl" aria-hidden="true">❦</span><span class="corner br" aria-hidden="true">❦</span>
         <div class="lseal" id="lseal" aria-hidden="true">♡</div>
-     
-        <h3 id="loginHeading">Oy is this my rangdar?</h3>
+        <!-- ✦ EDIT THIS: LOGIN CARD HEADING ✦ -->
+        <h3 id="loginHeading">Who goes there?</h3>
         <form id="loginForm" novalidate>
-       
+          <!-- ✦ EDIT THIS: USERNAME LABEL ✦ -->
           <label for="user">Username</label>
           <input id="user" name="user" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
-     
+          <!-- ✦ EDIT THIS: PASSWORD LABEL ✦ -->
           <label for="pass">Password</label>
-          <input id="pass" name="pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+          <div class="field">
+            <input id="pass" name="pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+            <!-- ✦ EDIT THIS: SHOW/HIDE PASSWORD WORDS (also in script.js) ✦ -->
+            <button class="peek" id="peek" type="button" aria-pressed="false" aria-label="Show password">peek</button>
+          </div>
           <p class="login-error" id="loginError" role="alert"></p>
-          
+          <!-- ✦ EDIT THIS: LOGIN BUTTON TEXT ✦ -->
           <button class="go" type="submit">open the garden ♡</button>
         </form>
-      
+        <!-- ✦ EDIT THIS: LOGIN HINT ✦ -->
         <p class="login-hint">
           Username: Your name in capitals,<br>
           Password: Your name in small letters
@@ -51,25 +98,27 @@
 
   <div id="app"></div>
 
-
-
- <template id="mainPage">
+  <!-- =====================================================
+       PAGE 2: THE BOUQUET PAGE
+       Nothing inside this <template> is shown (or even added to the page)
+       until the correct login is entered. Edit it exactly as before.
+  ===================================================== -->
+  <template id="mainPage">
   <main class="scene" id="mainScene">
-
-
 
     <header class="banner">
       <span class="deco" aria-hidden="true">✿ ♡ ✿</span>
-
+      <!-- ✦ EDIT THIS: MAIN TITLE ✦ -->
       <h1>National Boyfriend's Day</h1>
- 
-      <p class="subtitle">🫶🏼 a letter and bouquet, handmade, for my cutu sa bhondu bachha 🫶🏼</p>
+      <!-- ✦ EDIT THIS: SUBTITLE ✦ -->
+      <p class="subtitle">a little something, just for you</p>
       <span class="star" aria-hidden="true">✦</span>
     </header>
 
-  
+    <!-- ================= BOUQUET ================= -->
     <div class="bouquet">
-     
+      <!-- THE CLICKABLE LETTER: a real button laid invisibly over the envelope drawn in the picture. -->
+      <!-- ✦ EDIT THIS: SCREEN-READER LABEL FOR THE LETTER (aria-label) ✦ -->
       <button class="hit" id="openBtn" type="button" aria-label="Open the hidden letter"><span class="hint" aria-hidden="true">open me</span></button>
 
       <svg class="art" viewBox="0 0 400 480" role="img" aria-label="A hand-tied bouquet of lilies, lotus, sunflowers, roses, daisies, forget-me-nots, lavender, baby's breath and ferns, with a sealed letter tucked inside">
@@ -107,7 +156,7 @@
         <use class="fl" href="#lily" x="85" y="85" width="85" height="85"/>
         <use class="fl" href="#lily" x="235" y="75" width="90" height="90"/>
 
-       
+        <!-- HIDDEN LETTER (between back and front flowers so it looks tucked in) -->
         <g class="env"><g transform="translate(200 205) rotate(-8)">
           <rect x="-52" y="-58" width="104" height="76" rx="3" fill="#f6ead0" stroke="#d3bf98"/>
           <path d="M-52 -58L0 -14L52 -58Z" fill="#ecd9b1" stroke="#d3bf98"/>
@@ -115,7 +164,7 @@
           <text y="-9.5" text-anchor="middle" font-size="13" fill="#fff3ee">♡</text>
         </g></g>
 
-        
+        <!-- FRONT: flowers covering the lower part of the letter -->
         <use class="fl" href="#rose" x="135" y="185" width="72" height="72"/>
         <use class="fl" href="#rose" x="200" y="205" width="64" height="64"/>
         <use class="fl" href="#daisy" x="95" y="215" width="68" height="68"/>
@@ -128,6 +177,7 @@
 
         <g class="sparkles" fill="#c9a24d" font-size="16" text-anchor="middle"><text x="80" y="120">✦</text><text x="320" y="110">✦</text><text x="200" y="40">✧</text><text x="350" y="260">✿</text><text x="45" y="270">♡</text></g>
 
+        <!-- wrapping paper, ribbon, tag -->
         <g class="wrap">
           <path d="M85 300C130 292 270 292 315 300L228 452Q200 462 172 452Z" fill="url(#paper)" fill-opacity=".93" stroke="#d9c7a5" stroke-width="1.5"/>
           <path d="M85 300C110 330 160 360 200 455M315 300C290 330 240 360 200 455" stroke="#d9c7a5" fill="none"/>
@@ -136,46 +186,64 @@
           <path d="M200 376C180 356 160 372 168 392C176 408 196 388 200 376ZM200 376C220 356 240 372 232 392C224 408 204 388 200 376Z" fill="#e2aab4" stroke="#b9707f"/>
           <circle cx="200" cy="378" r="7" fill="#c98593"/>
           <path d="M196 384L184 424M204 384L218 420" stroke="#b9707f" stroke-width="3" stroke-linecap="round" fill="none"/>
-      
-          <g transform="translate(236 410) rotate(10)"><rect width="84" height="26" rx="4" fill="#fffaf0" stroke="#d9c7a5"/><circle cx="8" cy="13" r="2.5" fill="#eadcc0" stroke="#c7b48f"/><text x="48" y="17.5" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#b9707f">for Ridhanshu</text></g>
+          <!-- ✦ EDIT THIS: BOUQUET TAG (keep it short so it fits) ✦ -->
+          <g transform="translate(236 410) rotate(10)"><rect width="84" height="26" rx="4" fill="#fffaf0" stroke="#d9c7a5"/><circle cx="8" cy="13" r="2.5" fill="#eadcc0" stroke="#c7b48f"/><text x="48" y="17.5" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#b9707f">for [HIS NAME]</text></g>
         </g>
       </svg>
     </div>
 
-  
-    <p class="whisper">a letter in the bouquet for my rangdar...</p>
+    <!-- ✦ EDIT THIS: SMALL MESSAGE NEAR BOUQUET ✦ -->
+    <p class="whisper">there's something hiding in here...</p>
     <span class="deco heart" aria-hidden="true">♡</span>
+
+    <!--
+         OPTIONAL MUSIC:
+         Replace the audio file path below with your own music file.
+         Do not enable autoplay.
+    -->
+    <!-- ✦ EDIT THIS: MUSIC BUTTON TEXT ✦ -->
+    <button class="music" id="musicBtn" type="button" aria-pressed="false">♪ our little soundtrack</button>
+    <audio id="song" src="music.mp3" preload="none"></audio>
+    <span class="music-note" id="musicNote" role="status" aria-live="polite"></span>
   </main>
 
-
+  <!-- ================= OPEN LETTER ================= -->
   <div class="overlay" id="overlay">
     <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterHeading" tabindex="-1" id="letter">
       <button class="close" id="closeBtn" type="button" aria-label="Fold the letter back into the bouquet">×</button>
       <div class="paper">
         <span class="corner tl" aria-hidden="true">❦</span><span class="corner br" aria-hidden="true">❦</span>
-   
-        <h2 id="letterHeading">A Letter for my Sweetie</h2>
+        <!-- ✦ EDIT THIS: LETTER HEADING ✦ -->
+        <h2 id="letterHeading">A Little Letter</h2>
 
-      
+        <!-- =====================================================
+             EDIT YOUR LETTER HERE
+             Replace the sample text below with your own message.
+             You can write as many paragraphs as you want:
+             copy a whole <p>...</p> line to add another one.
+        ===================================================== -->
         <div class="body">
-        
-          <p class="dear">Dearest Ridhanshu,</p>
-         
-          <p>Do you know 3rd October is National Boyfriend's Day? LOL even I didn't until last night (for reference, I am writing this on 29th of September). Well, everyday for me is a boyfriend's day yk. I love you so much, and I am so grateful for you. I feel so inarticulate when it comes to expressing how much I love you, yearn for you, crave you. You deserve love everyyddaayyy.</p>
-          <p>But still here I am, writing yet another para for you, cuz you deserve love all the time. You are my cutu sa bhondu yaar. Tumko na pyaar du to aur kisko du??? You are my everything, my reason to being, the reason I have a will to live for. Yout taught me how to love, how to feel, how to be mad in love and go blind. I always found the concept of going mad for love, stupid. But you taught me exactly how easy it was for me to fall for you and be absolutely enamoured by you.</p>
-          <p>Ugh, I love you so much. Happy Boyfriend's Day to the best boyfriend ever. I hope nobody is blessed with a boyfriend as peak as mine. I love you so much, so so so so so SOOOO FUCKING MUCCHHHHH AAAHHHHHH. It is a blessing to have met you, darling. I adore you sooooo much. You are my everything. EVERYTTHINNGGGGG. I love you mwah 💋💋</p>
-      
+          <!-- ✦ EDIT THIS: BOYFRIEND'S NAME ✦ -->
+          <p class="dear">Dear [BOYFRIEND'S NAME],</p>
+          <!-- ✦ EDIT THIS: LETTER BODY ✦ -->
+          <p>[WRITE YOUR LETTER HERE]</p>
+          <p>[WRITE ANOTHER PARAGRAPH HERE]</p>
+          <p>[WRITE ANOTHER PARAGRAPH HERE]</p>
+          <!-- ✦ EDIT THIS: CLOSING MESSAGE ✦ -->
           <p class="closing">With all my love,</p>
-     
-          <p class="signature">Ari</p>
+          <!-- ✦ EDIT THIS: SIGNATURE ✦ -->
+          <p class="signature">[YOUR NAME]</p>
         </div>
 
-        <p class="ps">p.s. ✿ please teleport</p>
-
+        <!-- ✦ EDIT THIS: SMALL DECORATIVE MESSAGE ✦ -->
+        <p class="ps">p.s. ✿ pressed this flower just for you</p>
+        <!-- ✦ EDIT THIS: FOLD BUTTON TEXT ✦ -->
         <button class="fold" id="foldBtn" type="button">fold the letter</button>
       </div>
     </article>
   </div>
+
+  </template>
 
   <script src="script.js?v=4"></script>
 </body>
