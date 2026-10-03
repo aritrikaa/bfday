@@ -1,0 +1,63 @@
+<!--
+========================================================
+LOGIN PAGE GUIDE
+
+Search for "EDIT THIS" to find every customizable part.
+The username and password are NOT here: they are at the
+very top of script.js (look for "EDIT THIS: LOGIN DETAILS").
+========================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For You ♡ · Sign in</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Pinyon+Script&family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <main class="scene">
+    <header class="banner">
+      <span class="deco" aria-hidden="true">✿ ♡ ✿</span>
+      <!-- ✦ EDIT THIS: LOGIN PAGE TITLE ✦ -->
+      <h1>National Boyfriend's Day</h1>
+      <!-- ✦ EDIT THIS: LOGIN SUBTITLE ✦ -->
+      <p class="subtitle">a little secret is waiting for you</p>
+      <span class="star" aria-hidden="true">✦</span>
+    </header>
+
+    <section class="card" id="card" aria-labelledby="cardTitle">
+      <span class="corner tl" aria-hidden="true">❦</span><span class="corner br" aria-hidden="true">❦</span>
+      <div class="seal" id="seal" aria-hidden="true">♡</div>
+      <!-- ✦ EDIT THIS: CARD HEADING ✦ -->
+      <h2 id="cardTitle">Who goes there?</h2>
+
+      <form id="loginForm" novalidate>
+        <!-- ✦ EDIT THIS: USERNAME LABEL ✦ -->
+        <label for="user">Username</label>
+        <input id="user" name="user" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+
+        <!-- ✦ EDIT THIS: PASSWORD LABEL ✦ -->
+        <label for="pass">Password</label>
+        <input id="pass" name="pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+
+        <p class="error" id="error" role="alert"></p>
+        <!-- ✦ EDIT THIS: BUTTON TEXT ✦ -->
+        <button class="go" type="submit">open the garden ♡</button>
+      </form>
+
+      <!-- ✦ EDIT THIS: HINT ✦ -->
+      <p class="hint">
+        Username: Your name in capitals,<br>
+        Password: Your name in small letters
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
