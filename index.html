@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    try { if (sessionStorage.getItem("loggedIn") !== "yes") { window.location.replace("login/index.html"); } } catch (e) {}
+  </script>
   <title>For You ♡</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Pinyon+Script&family=Caveat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=4">
