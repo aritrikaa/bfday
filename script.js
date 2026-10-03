@@ -102,7 +102,7 @@ loginForm.addEventListener("submit", function (e) {
     setTimeout(showMainPage, 1200);
   } else {
     /* ✦ EDIT THIS: WRONG LOGIN MESSAGE ✦ */
-    loginError.textContent = "hmm, that's not quite right. check the hint below ♡";
+    loginError.textContent = "oy rangdar hint dekhnnaaaaa ♡";
     loginCard.classList.remove("shake");
     void loginCard.offsetWidth;
     loginCard.classList.add("shake");
