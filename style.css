@@ -91,7 +91,9 @@ button { font: inherit; cursor: pointer; }
 @keyframes twinkle { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
 @keyframes drift { 0% { transform: translate(0,0) rotate(0); opacity: 0; } 12% { opacity: .7; } 85% { opacity: .5; } 100% { transform: translate(var(--dx), -110vh) rotate(260deg); opacity: 0; } }
 
-/*login*/
+/* ================================
+   LOGIN SCREEN
+================================ */
 .particles { z-index: 45; }  /* keep the floating bits visible above the login screen */
 .login-view { position: fixed; inset: 0; z-index: 40; overflow-y: auto; display: flex; padding: 20px 16px 40px; transition: opacity .9s ease, visibility 0s .9s;
   background: radial-gradient(ellipse at 50% 45%, #fffaf0, transparent 60%), radial-gradient(circle at 8% 8%, #f3dfe0, transparent 40%), radial-gradient(circle at 92% 92%, #e3ead7, transparent 45%), var(--cream); }
@@ -116,6 +118,8 @@ button { font: inherit; cursor: pointer; }
 .login-card.shake { animation: shake .45s ease; }
 @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-9px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(4px); } }
 
+#app { animation: appin 1.2s ease; }
+@keyframes appin { from { opacity: 0; } to { opacity: 1; } }
 
 /* ================================
    MOBILE RESPONSIVE
@@ -126,6 +130,7 @@ button { font: inherit; cursor: pointer; }
   .music { left: 50%; right: auto; translate: -50% 0; bottom: 10px; }
   .music-note { right: auto; left: 50%; translate: -50% 0; bottom: 52px; }
   .close { right: 4px; top: -10px; }
+  .login-card { margin-top: 36px; }
 }
 @media (max-height: 560px) and (orientation: landscape) { .bouquet { width: min(280px, 40vh); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition-duration: .01s !important; } }
