@@ -1,16 +1,4 @@
-<!--
-========================================================
-PERSONALIZATION GUIDE
 
-Most of the website's written content can be edited
-directly in this HTML file.
-
-Search for "EDIT THIS" to find every customizable section.
-
-You do NOT need to modify the JavaScript to change
-the letter itself.
-========================================================
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,17 +16,15 @@ the letter itself.
 
     <header class="banner">
       <span class="deco" aria-hidden="true">✿ ♡ ✿</span>
-      <!-- ✦ EDIT THIS: MAIN TITLE ✦ -->
+
       <h1>National Boyfriend's Day</h1>
-      <!-- ✦ EDIT THIS: SUBTITLE ✦ -->
-      <p class="subtitle">a little something, just for you</p>
+ 
+      <p class="subtitle">a letter for my cutu sa bhondu bachha 🫶🏼</p>
       <span class="star" aria-hidden="true">✦</span>
     </header>
 
-    <!-- ================= BOUQUET ================= -->
     <div class="bouquet">
-      <!-- THE CLICKABLE LETTER: a real button laid invisibly over the envelope drawn in the picture. -->
-      <!-- ✦ EDIT THIS: SCREEN-READER LABEL FOR THE LETTER (aria-label) ✦ -->
+  
       <button class="hit" id="openBtn" type="button" aria-label="Open the hidden letter"><span class="hint" aria-hidden="true">open me</span></button>
 
       <svg class="art" viewBox="0 0 400 480" role="img" aria-label="A hand-tied bouquet of lilies, lotus, sunflowers, roses, daisies, forget-me-nots, lavender, baby's breath and ferns, with a sealed letter tucked inside">
@@ -61,7 +47,6 @@ the letter itself.
           <path d="M200 400C150 300 100 230 90 170"/><path d="M200 400C180 300 150 220 150 120"/><path d="M200 400C200 300 205 200 205 90"/><path d="M200 400C225 300 260 220 262 125"/><path d="M200 400C250 300 300 230 312 170"/>
         </g>
 
-        <!-- BACK: greenery + back flowers -->
         <use href="#fern" x="40" y="130" width="70" height="230" transform="rotate(-35 75 245)"/>
         <use href="#fern" x="290" y="130" width="70" height="230" transform="rotate(35 325 245)"/>
         <use href="#fern" x="165" y="20" width="70" height="230" transform="rotate(-6 200 135)"/>
@@ -76,7 +61,7 @@ the letter itself.
         <use class="fl" href="#lily" x="85" y="85" width="85" height="85"/>
         <use class="fl" href="#lily" x="235" y="75" width="90" height="90"/>
 
-        <!-- HIDDEN LETTER (between back and front flowers so it looks tucked in) -->
+      
         <g class="env"><g transform="translate(200 205) rotate(-8)">
           <rect x="-52" y="-58" width="104" height="76" rx="3" fill="#f6ead0" stroke="#d3bf98"/>
           <path d="M-52 -58L0 -14L52 -58Z" fill="#ecd9b1" stroke="#d3bf98"/>
@@ -84,7 +69,7 @@ the letter itself.
           <text y="-9.5" text-anchor="middle" font-size="13" fill="#fff3ee">♡</text>
         </g></g>
 
-        <!-- FRONT: flowers covering the lower part of the letter -->
+    
         <use class="fl" href="#rose" x="135" y="185" width="72" height="72"/>
         <use class="fl" href="#rose" x="200" y="205" width="64" height="64"/>
         <use class="fl" href="#daisy" x="95" y="215" width="68" height="68"/>
@@ -97,7 +82,7 @@ the letter itself.
 
         <g class="sparkles" fill="#c9a24d" font-size="16" text-anchor="middle"><text x="80" y="120">✦</text><text x="320" y="110">✦</text><text x="200" y="40">✧</text><text x="350" y="260">✿</text><text x="45" y="270">♡</text></g>
 
-        <!-- wrapping paper, ribbon, tag -->
+    
         <g class="wrap">
           <path d="M85 300C130 292 270 292 315 300L228 452Q200 462 172 452Z" fill="url(#paper)" fill-opacity=".93" stroke="#d9c7a5" stroke-width="1.5"/>
           <path d="M85 300C110 330 160 360 200 455M315 300C290 330 240 360 200 455" stroke="#d9c7a5" fill="none"/>
@@ -106,58 +91,38 @@ the letter itself.
           <path d="M200 376C180 356 160 372 168 392C176 408 196 388 200 376ZM200 376C220 356 240 372 232 392C224 408 204 388 200 376Z" fill="#e2aab4" stroke="#b9707f"/>
           <circle cx="200" cy="378" r="7" fill="#c98593"/>
           <path d="M196 384L184 424M204 384L218 420" stroke="#b9707f" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- ✦ EDIT THIS: BOUQUET TAG (keep it short so it fits) ✦ -->
-          <g transform="translate(236 410) rotate(10)"><rect width="84" height="26" rx="4" fill="#fffaf0" stroke="#d9c7a5"/><circle cx="8" cy="13" r="2.5" fill="#eadcc0" stroke="#c7b48f"/><text x="48" y="17.5" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#b9707f">for [HIS NAME]</text></g>
+         
+          <g transform="translate(236 410) rotate(10)"><rect width="84" height="26" rx="4" fill="#fffaf0" stroke="#d9c7a5"/><circle cx="8" cy="13" r="2.5" fill="#eadcc0" stroke="#c7b48f"/><text x="48" y="17.5" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#b9707f">for Ridhanshu</text></g>
         </g>
       </svg>
     </div>
 
-    <!-- ✦ EDIT THIS: SMALL MESSAGE NEAR BOUQUET ✦ -->
-    <p class="whisper">there's something hiding in here...</p>
+    <p class="whisper">something for my rangdar...</p>
     <span class="deco heart" aria-hidden="true">♡</span>
-
-    <!--
-         OPTIONAL MUSIC:
-         Replace the audio file path below with your own music file.
-         Do not enable autoplay.
-    -->
-    <!-- ✦ EDIT THIS: MUSIC BUTTON TEXT ✦ -->
-    <button class="music" id="musicBtn" type="button" aria-pressed="false">♪ our little soundtrack</button>
-    <audio id="song" src="music.mp3" preload="none"></audio>
-    <span class="music-note" id="musicNote" role="status" aria-live="polite"></span>
   </main>
 
-  <!-- ================= OPEN LETTER ================= -->
   <div class="overlay" id="overlay">
     <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterHeading" tabindex="-1" id="letter">
       <button class="close" id="closeBtn" type="button" aria-label="Fold the letter back into the bouquet">×</button>
       <div class="paper">
         <span class="corner tl" aria-hidden="true">❦</span><span class="corner br" aria-hidden="true">❦</span>
-        <!-- ✦ EDIT THIS: LETTER HEADING ✦ -->
-        <h2 id="letterHeading">A Little Letter</h2>
 
-        <!-- =====================================================
-             EDIT YOUR LETTER HERE
-             Replace the sample text below with your own message.
-             You can write as many paragraphs as you want:
-             copy a whole <p>...</p> line to add another one.
-        ===================================================== -->
+        <h2 id="letterHeading">A Letter for my sweetie</h2>
+
+   
         <div class="body">
-          <!-- ✦ EDIT THIS: BOYFRIEND'S NAME ✦ -->
-          <p class="dear">Dear [BOYFRIEND'S NAME],</p>
-          <!-- ✦ EDIT THIS: LETTER BODY ✦ -->
-          <p>[WRITE YOUR LETTER HERE]</p>
-          <p>[WRITE ANOTHER PARAGRAPH HERE]</p>
-          <p>[WRITE ANOTHER PARAGRAPH HERE]</p>
-          <!-- ✦ EDIT THIS: CLOSING MESSAGE ✦ -->
-          <p class="closing">With all my love,</p>
-          <!-- ✦ EDIT THIS: SIGNATURE ✦ -->
-          <p class="signature">[YOUR NAME]</p>
-        </div>
+      
+          <p class="dear">Dearest Ridhanshu,</p>
 
-        <!-- ✦ EDIT THIS: SMALL DECORATIVE MESSAGE ✦ -->
-        <p class="ps">p.s. ✿ pressed this flower just for you</p>
-        <!-- ✦ EDIT THIS: FOLD BUTTON TEXT ✦ -->
+          <p>Do you know it's national boyfriend's day today??? Hell yeaaahhh. I just found out last night (for reference it's 29th of september today) and I really wanted to make smth for my darling baby</p>
+          <p>So here is loads of love for my darling cutu. Happy boyfriend's day cutie. You are the best blessing I ever got and I just don't know how to express all that you mean to me. No matter how many words I deliver, it always feels wayyyy tooo short. Wayyyy too less. You are the boy who stole my heart and made me experience so many lovely emotions and stages of love. You are the love of my life, my eternal sweetheart. I love youu sooooo much Ridhanshu.</p>
+          <p>I love you the most. More than anyone or anything. And I know nobody can ever love you more than I can because my love for is just so eternally boundless, you mean everything to me. You are my world, my home, my darling. Happy boyfriend's day, cutie. You the best boyfriend ever fr, and I am soooooooo glad I met youu. Mwaahhh 💋💋</p>
+    
+          <p class="closing">With all my love,</p>
+          <p class="signature">Ari</p>
+        </div>
+        <p class="ps">p.s. ✿ Please teleport</p>
+     
         <button class="fold" id="foldBtn" type="button">fold the letter</button>
       </div>
     </article>
