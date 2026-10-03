@@ -1,14 +1,9 @@
 var USERNAME = "RIDHANSHU";
 var PASSWORD = "ridhanshu";
 
-
-var overlay = document.getElementById("overlay");
-var letter = document.getElementById("letter");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
-var foldBtn = document.getElementById("foldBtn");
-
-
+/* ================================
+   BACKGROUND PARTICLES (sparse on purpose)
+================================ */
 (function () {
   var box = document.getElementById("particles");
   var symbols = ["✿", "♡", "✦", "·", "❀"];
@@ -25,50 +20,9 @@ var foldBtn = document.getElementById("foldBtn");
   }
 })();
 
-function openLetter() {
-  overlay.classList.add("open");
-  setTimeout(function () { closeBtn.focus(); }, 500);
-}
-function closeLetter() {
-  overlay.classList.remove("open");
-  openBtn.focus();
-}
-openBtn.addEventListener("click", openLetter);
-closeBtn.addEventListener("click", closeLetter);
-foldBtn.addEventListener("click", closeLetter);
-overlay.addEventListener("click", function (e) { if (e.target === overlay) closeLetter(); });
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && overlay.classList.contains("open")) closeLetter();
-});
-
 /* ================================
- MUSIC
-   Put music.mp3 next to index.html (or change src in index.html).
+   LOGIN (page 1)
 ================================ */
-var song = document.getElementById("song");
-var musicBtn = document.getElementById("musicBtn");
-var note = document.getElementById("musicNote");
-var songMissing = false;
-song.addEventListener("error", function () { songMissing = true; });
-
-function showNote(text) {
-  note.textContent = text;
-  setTimeout(function () { note.textContent = ""; }, 2500);
-}
-musicBtn.addEventListener("click", function () {
-  if (songMissing) { showNote("add music.mp3 to play a song ♡"); return; }
-  if (song.paused) {
-    var result = song.play();
-    if (result && result.then) {
-      result.then(function () { musicBtn.setAttribute("aria-pressed", "true"); })
-            .catch(function () { showNote("add music.mp3 to play a song ♡"); });
-    }
-  } else {
-    song.pause();
-    musicBtn.setAttribute("aria-pressed", "false");
-  }
-});
-
 var loginView = document.getElementById("loginView");
 var loginForm = document.getElementById("loginForm");
 var userInput = document.getElementById("user");
@@ -76,7 +30,6 @@ var passInput = document.getElementById("pass");
 var loginError = document.getElementById("loginError");
 var loginCard = document.getElementById("loginCard");
 var lseal = document.getElementById("lseal");
-var mainScene = document.getElementById("mainScene");
 
 userInput.focus();
 
@@ -86,14 +39,10 @@ loginForm.addEventListener("submit", function (e) {
     loginError.textContent = "";
     loginCard.classList.add("success");
     lseal.textContent = "✿";
-    setTimeout(function () {
-      loginView.classList.add("unlocked");
-      mainScene.removeAttribute("inert");
-      openBtn.focus({ preventScroll: true });
-    }, 900);
+    setTimeout(showMainPage, 900);
   } else {
-
-    loginError.textContent = "oy rangdar, hint check karrrr ♡";
+    /* ✦ EDIT THIS: WRONG LOGIN MESSAGE ✦ */
+    loginError.textContent = "oyyyy rangdaaarr, hint dekhkr, sahi se likhnaaaa ♡";
     loginCard.classList.remove("shake");
     void loginCard.offsetWidth;
     loginCard.classList.add("shake");
@@ -101,4 +50,42 @@ loginForm.addEventListener("submit", function (e) {
     passInput.focus();
   }
 });
+
+/* ================================
+   SHOW PAGE 2 (only runs after a correct login)
+================================ */
+function showMainPage() {
+  var tpl = document.getElementById("mainPage");
+  document.getElementById("app").appendChild(tpl.content.cloneNode(true));
+  loginView.classList.add("unlocked");
+  setTimeout(function () { loginView.remove(); }, 1000);
+  initMainPage();
+}
+
+/* ================================
+   BOUQUET PAGE BEHAVIOUR
+================================ */
+function initMainPage() {
+  var overlay = document.getElementById("overlay");
+  var openBtn = document.getElementById("openBtn");
+  var closeBtn = document.getElementById("closeBtn");
+  var foldBtn = document.getElementById("foldBtn");
+
+  /* ---- open / close the letter ---- */
+  function openLetter() {
+    overlay.classList.add("open");
+    setTimeout(function () { closeBtn.focus(); }, 500);
+  }
+  function closeLetter() {
+    overlay.classList.remove("open");
+    openBtn.focus();
+  }
+  openBtn.addEventListener("click", openLetter);
+  closeBtn.addEventListener("click", closeLetter);
+  foldBtn.addEventListener("click", closeLetter);
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) closeLetter(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay.classList.contains("open")) closeLetter();
+  });
+
 
