@@ -1,15 +1,14 @@
-/* ================================
-   ELEMENTS
-================================ */
+var USERNAME = "RIDHANSHU";
+var PASSWORD = "ridhanshu";
+
+
 var overlay = document.getElementById("overlay");
 var letter = document.getElementById("letter");
 var openBtn = document.getElementById("openBtn");
 var closeBtn = document.getElementById("closeBtn");
 var foldBtn = document.getElementById("foldBtn");
 
-/* ================================
-   BACKGROUND PARTICLES (sparse on purpose)
-================================ */
+
 (function () {
   var box = document.getElementById("particles");
   var symbols = ["✿", "♡", "✦", "·", "❀"];
@@ -26,9 +25,6 @@ var foldBtn = document.getElementById("foldBtn");
   }
 })();
 
-/* ================================
-   OPEN / CLOSE THE LETTER
-================================ */
 function openLetter() {
   overlay.classList.add("open");
   setTimeout(function () { closeBtn.focus(); }, 500);
@@ -46,7 +42,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 /* ================================
-   OPTIONAL MUSIC
+ MUSIC
    Put music.mp3 next to index.html (or change src in index.html).
 ================================ */
 var song = document.getElementById("song");
@@ -72,3 +68,37 @@ musicBtn.addEventListener("click", function () {
     musicBtn.setAttribute("aria-pressed", "false");
   }
 });
+
+var loginView = document.getElementById("loginView");
+var loginForm = document.getElementById("loginForm");
+var userInput = document.getElementById("user");
+var passInput = document.getElementById("pass");
+var loginError = document.getElementById("loginError");
+var loginCard = document.getElementById("loginCard");
+var lseal = document.getElementById("lseal");
+var mainScene = document.getElementById("mainScene");
+
+userInput.focus();
+
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (userInput.value.trim() === USERNAME && passInput.value === PASSWORD) {
+    loginError.textContent = "";
+    loginCard.classList.add("success");
+    lseal.textContent = "✿";
+    setTimeout(function () {
+      loginView.classList.add("unlocked");
+      mainScene.removeAttribute("inert");
+      openBtn.focus({ preventScroll: true });
+    }, 900);
+  } else {
+
+    loginError.textContent = "oy rangdar, hint check karrrr ♡";
+    loginCard.classList.remove("shake");
+    void loginCard.offsetWidth;
+    loginCard.classList.add("shake");
+    passInput.value = "";
+    passInput.focus();
+  }
+});
+
